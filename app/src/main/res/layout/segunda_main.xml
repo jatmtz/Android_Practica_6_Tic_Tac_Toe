@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Segunda"
+    android:background="@drawable/fondo_bob"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_begin="150dp" />
+
+
+
+     <TextView
+         android:id="@+id/txt1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Jugador 1"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toStartOf="@id/txt2"
+         app:layout_constraintBottom_toBottomOf="@id/gl1"
+         android:textSize="30dp"
+         />
+
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador 2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/gl1"
+        android:textSize="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img2"
+        app:layout_constraintTop_toBottomOf="@id/txt1"
+        android:src="@drawable/bob"
+        />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img1"
+        app:layout_constraintTop_toBottomOf="@id/txt2"
+        android:src="@drawable/patricio"
+        />
+
+
+    <ImageView
+        android:id="@+id/imgA"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/fondo_azul"
+        app:layout_constraintBottom_toTopOf="@id/imgD"
+        app:layout_constraintEnd_toStartOf="@id/imgB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="250dp"
+         />
+
+    <ImageView
+        android:id="@+id/imgB"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgC"
+        app:layout_constraintBottom_toTopOf="@id/imgE"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="250dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgC"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgF"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="250dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgD"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgA"
+        app:layout_constraintEnd_toStartOf="@id/imgE"
+        app:layout_constraintBottom_toTopOf="@id/imgG"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgE"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgD"
+        app:layout_constraintTop_toBottomOf="@id/imgB"
+        app:layout_constraintEnd_toStartOf="@id/imgF"
+        app:layout_constraintBottom_toTopOf="@id/imgH"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="11dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgF"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgE"
+        app:layout_constraintTop_toBottomOf="@id/imgC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgI"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgG"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgD"
+        app:layout_constraintEnd_toStartOf="@id/imgH"
+        android:src="@drawable/fondo_azul"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgH"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgG"
+        app:layout_constraintTop_toBottomOf="@id/imgE"
+        app:layout_constraintEnd_toStartOf="@id/imgI"
+       android:layout_marginTop="11dp"
+        android:src="@drawable/fondo_azul"
+        />
+
+    <ImageView
+        android:id="@+id/imgI"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgH"
+        app:layout_constraintTop_toBottomOf="@id/imgF"
+        app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="10dp"
+        android:src="@drawable/fondo_azul"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
