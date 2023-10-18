@@ -11,8 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView countdownTimer;
 
-    CountDownTimer timer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,20 +18,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         countdownTimer = (TextView) findViewById(R.id.countdown_timer);
 
-        CountDownTimer CDT = new CountDownTimer(5000,1000) {
+        CountDownTimer CountDownTimer = new CountDownTimer(5000, 1000) {
             @Override
             public void onTick(long milliUntilFinish) {
-                countdownTimer.setText("" + milliUntilFinish /1000);
+                countdownTimer.setText("" + milliUntilFinish / 1000);
             }
 
             @Override
             public void onFinish() {
-                Intent i = new Intent(getApplicationContext(), Segunda.class);
-
+                Intent i = new Intent(MainActivity.this, Segunda.class);
+                startActivity(i);
+                finish();
             }
-        };
+        }.start();
 
-        CDT.start();
 
     }
 }

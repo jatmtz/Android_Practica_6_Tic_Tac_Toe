@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toStartOf="@id/imgB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
          />
 
     <ImageView
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toStartOf="@id/imgC"
         app:layout_constraintBottom_toTopOf="@id/imgE"
         android:src="@drawable/fondo_azul"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         />
 
     <ImageView
@@ -96,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/imgF"
         android:src="@drawable/fondo_azul"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         />
 
     <ImageView
@@ -168,6 +168,154 @@
         android:src="@drawable/fondo_azul"
         />
 
+
+    <ImageView
+        android:id="@+id/imgAA"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        app:layout_constraintBottom_toTopOf="@id/imgD"
+        app:layout_constraintEnd_toStartOf="@id/imgB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgBB"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgA"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgC"
+        app:layout_constraintBottom_toTopOf="@id/imgE"
+
+        android:layout_marginTop="200dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgCC"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgF"
+
+        android:layout_marginTop="200dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgDD"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgA"
+        app:layout_constraintEnd_toStartOf="@id/imgE"
+        app:layout_constraintBottom_toTopOf="@id/imgG"
+
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgEE"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgD"
+        app:layout_constraintTop_toBottomOf="@id/imgB"
+        app:layout_constraintEnd_toStartOf="@id/imgF"
+        app:layout_constraintBottom_toTopOf="@id/imgH"
+
+        android:layout_marginTop="11dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgFF"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgE"
+        app:layout_constraintTop_toBottomOf="@id/imgC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgI"
+
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgGG"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgD"
+        app:layout_constraintEnd_toStartOf="@id/imgH"
+
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgHH"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgG"
+        app:layout_constraintTop_toBottomOf="@id/imgE"
+        app:layout_constraintEnd_toStartOf="@id/imgI"
+        android:layout_marginTop="11dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imgII"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@id/imgH"
+        app:layout_constraintTop_toBottomOf="@id/imgF"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+
+        />
+    <Button
+        android:id="@+id/btnvolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VOLVER A JUGAR"
+        android:background="@color/design_default_color_primary_dark"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="25dp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnsalida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALIR"
+        android:background="@color/design_default_color_primary_dark"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/btnresultados"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btnresultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULTADOS"
+        android:background="@color/design_default_color_primary_dark"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnsalida"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
