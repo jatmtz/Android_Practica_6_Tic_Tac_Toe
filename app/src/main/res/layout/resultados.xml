@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#01579B"
         android:orientation="vertical">
 
@@ -23,8 +23,47 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:textSize="40dp"
-            android:textStyle="bold"/>
+            android:textSize="60dp"
+            android:textStyle="bold"
+            android:background="#EAB109"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bob ganó:"
+            android:textColor="#EDB407"
+            android:textSize="30dp"
+            android:layout_margin="40dp"
+            />
+
+        <TextView
+            android:id="@+id/ganadasbob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#EDB407"
+            android:textSize="50dp"
+            android:layout_marginStart="80dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patricio ganó:"
+            android:textColor="#EDB407"
+            android:textSize="30dp"
+            android:layout_margin="40dp"
+            />
+        <TextView
+            android:id="@+id/ganadaspat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#EDB407"
+            android:textSize="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="70dp"
+            />
 
         <Button
             android:id="@+id/btn1"

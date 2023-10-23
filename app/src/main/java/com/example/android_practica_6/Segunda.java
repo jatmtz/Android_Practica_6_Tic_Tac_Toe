@@ -1,6 +1,6 @@
 package com.example.android_practica_6;
 
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -25,7 +25,9 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
     int[] gato = new int[9];
     int turno = 1;
 
-    Button salida, volver;
+    Button salida, volver, resultados;
+
+    int ganadasbob, ganadaspat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,8 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
 
         volver = (Button) findViewById(R.id.btnvolver);
         volver.setOnClickListener(this);
+
+
         salida.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View salida) {
@@ -70,9 +74,25 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View volver) {
+
                 borrar();
             }
         });
+
+        resultados = (Button) findViewById((R.id.btnresultados));
+
+        resultados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resultado();
+                borrar();
+                Intent i = new Intent(Segunda.this, Ganador.class);
+                startActivity(i);
+            }
+        });
+
+
+
     }
 
 
@@ -224,25 +244,19 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
         if(gato[3] == 1 && gato[4]==1 && gato[5]==1) bobgana = true;
         if(gato[6] == 1 && gato[7]==1 && gato[8]==1) bobgana = true;
 
-        if(gato[5] == 1 && gato[7]==1 && gato[8]==1) bobgana = true;
-        if(gato[3] == 1 && gato[4]==1 && gato[5]==1) bobgana = true;
-        if(gato[0] == 1 && gato[1]==1 && gato[2]==1) bobgana = true;
+
 
         if(gato[0] == 1 && gato[3]==1 && gato[6]==1) bobgana = true;
         if(gato[1] == 1 && gato[4]==1 && gato[7]==1) bobgana = true;
         if(gato[2] == 1 && gato[5]==1 && gato[8]==1) bobgana = true;
 
-        if(gato[6] == 1 && gato[3]==1 && gato[0]==1) bobgana = true;
-        if(gato[7] == 1 && gato[4]==1 && gato[1]==1) bobgana = true;
-        if(gato[8] == 1 && gato[5]==1 && gato[2]==1) bobgana = true;
 
         if(gato[8] == 1 && gato[4]==1 && gato[0]==1) bobgana = true;
         if(gato[6] == 1 && gato[4]==1 && gato[2]==1) bobgana = true;
-        if(gato[2] == 1 && gato[4]==1 && gato[6]==1) bobgana = true;
-        if(gato[0] == 1 && gato[4]==1 && gato[8]==1) bobgana = true;
+
 
         if(bobgana==true){
-            Toast.makeText(this, "Gano Bob Esponja!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Gano Bob Esponja!! Empieza Bob", Toast.LENGTH_SHORT).show();
             borrar();
         }
 
@@ -252,27 +266,24 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
         if(gato[3] == 2 && gato[4]==2 && gato[5]==2) patgana = true;
         if(gato[6] == 2 && gato[7]==2 && gato[8]==2) patgana = true;
 
-        if(gato[5] == 2 && gato[7]==2 && gato[8]==2) patgana = true;
-        if(gato[3] == 2 && gato[4]==2 && gato[5]==2) patgana = true;
-        if(gato[0] == 2 && gato[1]==2 && gato[2]==2) patgana = true;
+
 
         if(gato[0] == 2 && gato[3]==2 && gato[6]==2) patgana = true;
         if(gato[1] == 2 && gato[4]==2 && gato[7]==2) patgana = true;
         if(gato[2] == 2 && gato[5]==2 && gato[8]==2) patgana = true;
 
-        if(gato[6] == 2 && gato[3]==2 && gato[0]==2) patgana = true;
-        if(gato[7] == 2 && gato[4]==2 && gato[1]==2) patgana = true;
-        if(gato[8] == 2 && gato[5]==2 && gato[2]==2) patgana = true;
+
 
         if(gato[8] == 2 && gato[4]==2 && gato[0]==2) patgana = true;
         if(gato[6] == 2 && gato[4]==2 && gato[2]==2) patgana = true;
         if(gato[2] == 2 && gato[4]==2 && gato[6]==2) patgana = true;
-        if(gato[0] == 2 && gato[4]==2 && gato[8]==2) patgana = true;
+
 
         if(patgana==true){
-            Toast.makeText(this, "Gano Patricio!!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Gano Patricio!! Empieza Patricio", Toast.LENGTH_SHORT).show();
             borrar();
         }
+
 
     }
 
@@ -291,15 +302,30 @@ public class Segunda extends AppCompatActivity implements View.OnClickListener{
                 imgHH.setImageDrawable(null);
                 imgII.setImageDrawable(null);
 
+                if(bobgana == true){
+                    turno = 1;
+                }
+                else {
+                    turno = 2;
+                }
+
                 bobgana = false;
                 patgana = false;
 
                 for (int i = 0; i <= 8; i++){
                     gato[i] = 0;
-
                 }
 
+
             }
-        },1000);
+        },000);
     }
+
+    public void resultado() {
+        Intent intent = new Intent(Segunda.this, Ganador.class);
+        intent.putExtra("ganadasbobb", ganadasbob);
+        intent.putExtra("ganadaspatt", ganadaspat);
+        startActivity(intent);
+    }
+
 }
